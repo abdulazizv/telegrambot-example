@@ -39,10 +39,25 @@ global.routes = {
             }
             return global.routes.selectLanguage(ctx);
         }
+        if (!ctx.session.phone || !ctx.session.isRegistered) {
+            return global.routes.register(ctx);
+          }
         ctx.session.cart = [];
         ctx.session.__scenes = {};
         await saveSession(ctx);
 
-        return ctx.reply()
+        return ctx.reply(
+            welcome ? ctx.i18n.t("greeting") : ctx.i18n.t("main-menu"),
+            Markup.keyboard(
+                [
+                    [ctx.i18n.t("choose-food")],
+                    [ctx.i18n.t("settings"),ctx.i18n.t("korzinka")],
+                    [ctx.i18n.t("about-us"),ctx.i18n.t("support")]
+                ],
+                {columns: 1}
+            )
+            .resize()
+            .extra()
+        )
     }
 }
