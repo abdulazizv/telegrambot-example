@@ -33,7 +33,16 @@ bot.use(stage.middleware());
 global.routes = {
     start: async(ctx,welcome = true) => {
         if(!ctx.session.__language_code || ctx.i18n.locale() === "unset") {
-            
+            const check = await ChatsModel.getById(ctx.from.id);
+            if(!check) {
+                await ChatsModel.saveUser(ctx.from);
+            }
+            return global.routes.selectLanguage(ctx);
         }
+        ctx.session.cart = [];
+        ctx.session.__scenes = {};
+        await saveSession(ctx);
+
+        return ctx.reply()
     }
 }
