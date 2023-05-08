@@ -14,3 +14,7 @@ descriptionSupport: Siz bu yerga adminga so'zlaringizni yozishingiz mumkin
 success_message: Xabar muvaffaqiyatli yuborildi!
 about_usdescription: <b> “Oqtepa Lavash” – bu shahardagi eng yaxshi va eng mazali lavash o‘ramlarini taqdim etish orqali o‘z nomini qozongan yetakchi tez ovqatlanish kompaniyasi. Ovqatga bo'lgan ishtiyoqimiz bizni mijozlarimiz uchun eng yangi ingredientlardan tayyorlangan va mukammal darajada pishirilgan turli xil mazali va sog'lom o'rashlardan bahramand bo'lishlari mumkin bo'lgan noyob tajriba yaratishga undadi. Sifat va mijozlar ehtiyojini qondirishga sodiqligimiz bizni mintaqadagi tez ovqatlanishni yaxshi ko'radiganlar uchun birinchi raqamli tanlovga aylantirdi. Har bir luqma bilan bizning mijozlarimiz ta'm va lazzat olamiga olib boriladi, bu esa ularni ko'proq narsani xohlaydi. Bugun bizga qo'shiling va Oqtepa lavash quvonchini kashf eting!</b>
 configuration: ⚙️ Sozlamalar
+setLanguage: Tilni o'zgartirish
+setPhone: 🤳 Raqamni o'zgartirish
+descriptionforSetPhone: Yangi raqamni yuboring
+afterChangephoneNumber: Telefon raqam muvaffaqiyatli o'zgartirildi

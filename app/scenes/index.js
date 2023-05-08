@@ -3,5 +3,6 @@ module.exports = {
     register: require("./register"),
     chooseOptionOrder: require("./choose-optionOrder"),
     writeSupport: require("./writeToSupport"),
-    aboutUs: require("./about-us")
+    aboutUs: require("./about-us"),
+    settings: require("./settings")
 }

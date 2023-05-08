@@ -14,3 +14,7 @@ descriptionSupport: You can write your words to admin here !
 success_message: Message sent successfully!
 about_usdescription: <b>Oqtepa Lavash is a leading fast food company that has made a name for itself by serving the best and most delicious Lavash wraps in town. Our passion for food has driven us to create a unique experience for our customers, where they can enjoy a range of flavorful and healthy wraps that are made with the freshest ingredients and cooked to perfection. Our commitment to quality and customer satisfaction has made us the number one choice for fast food lovers in the area. With every bite, our customers are transported to a world of taste and flavor that leaves them craving for more. Join us today and discover the joy of Oqtepa Lavash!</b>
 configuration: ⚙️ Configuration
+setPhone: 🤳 Change phone number
+setLanguage: Change language
+descriptionforSetPhone: Send new number
+afterChangephoneNumber: Phone number successfully changed
