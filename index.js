@@ -59,5 +59,8 @@ global.routes = {
             .resize()
             .extra()
         )
-    }
+    },
+
+    selectLanguage: enter('select-language'),
+    register: enter('register') 
 }
