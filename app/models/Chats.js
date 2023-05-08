@@ -42,3 +42,5 @@ class Chats extends Model {
     }
 
 }
+
+module.exports = Chats;
