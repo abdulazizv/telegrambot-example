@@ -10,3 +10,5 @@ my-number: "📱 Telefon raqamini yuborish"
 start-order: Keling, avvalo buyurtmalar turini tanlab oling !
 withdelivery: 🚚 Yetkazib berish xizmati
 withsoboy: 👤 Olib ketish
+descriptionSupport: Siz bu yerga adminga so'zlaringizni yozishingiz mumkin
+success_message: Xabar muvaffaqiyatli yuborildi!

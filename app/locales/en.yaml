@@ -10,3 +10,5 @@ my-number: "📱 Send my number"
 start-order: Let's first choose option of order
 withdelivery: 🚚 Delivery
 withsoboy: 👤 Pick up
+descriptionSupport: You can write your words to admin here !
+success_message: Message sent successfully!

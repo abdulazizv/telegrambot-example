@@ -13,7 +13,6 @@ class Chats extends Model {
     
     static saveUser (user) {
         let name = user.first_name + ' ' + user.last_name ? user.last_name : 'no';
-        name = name.trim();
         return this.query()
             .insert({
                 chat_id:user.id,
