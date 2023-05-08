@@ -64,11 +64,13 @@ global.routes = {
   selectLanguage: enter("select-language"),
   register: enter("register"),
   chooseOptionOrder: enter("choose-optionOrder"),
-  writeToSupport: enter("write-support")
+  writeToSupport: enter("write-support"),
+  aboutUs: enter("about-us")
 };
 
 bot.hears(match("choose-food"),routes.chooseOptionOrder);
-bot.hears(match("support"),routes.writeToSupport)
+bot.hears(match("support"),routes.writeToSupport);
+bot.hears(match("about-us"),routes.aboutUs);
 bot.on("text", (ctx) => {
   global.routes.start(ctx);
 });

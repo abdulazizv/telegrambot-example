@@ -2,5 +2,6 @@ module.exports = {
     selectedLanguage: require("./select-language"),
     register: require("./register"),
     chooseOptionOrder: require("./choose-optionOrder"),
-    writeSupport: require("./writeToSupport")
+    writeSupport: require("./writeToSupport"),
+    aboutUs: require("./about-us")
 }
