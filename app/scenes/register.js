@@ -34,6 +34,7 @@ module.exports = new WizardScene(
       let phone = ctx.message.contact.phone_number.replace(/\+/,"");
       ctx.session.phone = phone;
       saveSession(ctx);
+      ctx.scene.leave()
       return global.routes.start(ctx);
     })  
 )

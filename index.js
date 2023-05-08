@@ -39,7 +39,7 @@ global.routes = {
       }
       return global.routes.selectLanguage(ctx);
     }
-    if (!ctx.session.phone || !ctx.session.isRegistered) {
+    if (!ctx.session.phone) {
       return global.routes.register(ctx);
     }
     ctx.session.cart = [];
