@@ -63,8 +63,10 @@ global.routes = {
 
   selectLanguage: enter("select-language"),
   register: enter("register"),
+  chooseOptionOrder: enter("choose-optionOrder")
 };
 
+bot.hears(match("choose-food"),routes.chooseOptionOrder)
 bot.on("text", (ctx) => {
   global.routes.start(ctx);
 });

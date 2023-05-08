@@ -18,14 +18,27 @@ function BasicCommandsHandler(handler) {
 }
 
 module.exports = new WizardScene(
-    'choose-option',
+    'choose-optionOrder',
         async (ctx) => {
             ctx.replyWithHTML(
                 ctx.i18n.t("start-order"),
                 Markup.keyboard([
-                    [ctx.i18n.t("")]
+                    [ctx.i18n.t("withdelivery"),ctx.i18n.t("withsoboy")],
+                    [ctx.i18n.t("main-menu")]
                 ])
+                .resize()
+                .extra()
             )
-        }
-    
+            return ctx.wizard.next()
+        },
+        (new Composer())
+        .hears(match("withdelivery"),async (ctx) => {
+            return global.routes.start(ctx)
+        }) 
+        .hears(match("withsoboy"),async (ctx) => {
+            return global.routes.start(ctx);
+        })
+        .hears(match("main-menu"),async (ctx) => {
+            return global.routes.start(ctx);
+        })
 )
