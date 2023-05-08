@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --delay 2 --watch app/ index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "knex": "^2.4.2",
-    "objection": "^3.0.1",
-    "telegraf": "^4.12.2",
+    "lodash": "^4.17.21",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.22",
+    "objection": "^2.2.2",
+    "telegraf": "^3.37.0",
     "telegraf-i18n": "^6.6.0",
     "telegraf-mysql-session": "^1.0.0"
   }

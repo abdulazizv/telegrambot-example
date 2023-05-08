@@ -1,3 +1,4 @@
 module.exports = {
-    selectedLanguage: require("./select-language")
+    selectedLanguage: require("./select-language"),
+    register: require("./register")
 }

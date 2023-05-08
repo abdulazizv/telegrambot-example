@@ -4,7 +4,7 @@ const Stage = require("telegraf/stage");
 const Markup = require("telegraf/markup");
 const { match } = TelegrafI18N;
 const path = require("path");
-const scenes = require("./scenes");
+const scenes = require("./app/scenes/index");
 const { ChatsModel } = require("./app/models");
 
 const { mysqlSession, saveSession } = require("./app/methods");

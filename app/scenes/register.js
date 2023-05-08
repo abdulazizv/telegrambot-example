@@ -21,8 +21,19 @@ function BasicCommandsHandler(handler) {
 module.exports = new WizardScene(
     "register",
     async (ctx) => {
-        return ctx.replyWithHTML(
-            
+        ctx.replyWithHTML(
+            ctx.i18n.t("start-sharePhone"),
+            Markup.keyboard([Markup.contactRequestButton(ctx.i18n.t("my-number"))])
+            .resize()
+            .extra()
         )
-    }  
+        return ctx.wizard.next();
+    },
+    BasicCommandsHandler()
+    .on("contact",async(ctx) => {
+      let phone = ctx.message.contact.phone_number.replace(/\+/,"");
+      ctx.session.phone = phone;
+      saveSession(ctx);
+      return global.routes.start(ctx);
+    })  
 )
