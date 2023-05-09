@@ -20,8 +20,8 @@ function BasicCommandsHandler(handler) {
 module.exports = new WizardScene(
     'order',
     async (ctx) => {
-        const order = await OrdersModel.getAllOrders();
-        if(order.length < 1) {
+        const order = ctx.session.order;
+        if(order.length < 1 || !order) {
             await ctx.scene.leave()
             return ctx.reply(ctx.i18n.t("noContentinOrder"),
                 Markup.keyboard(
