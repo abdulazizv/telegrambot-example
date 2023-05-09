@@ -1,11 +1,9 @@
-CREATE TABLE orders(
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(255),
-    order_date DATE,
-    price INT,
-    PRIMARY KEY(id)
+CREATE TABLE products (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255),
+  price INT(11),
+  PRIMARY KEY(id)
 );
-
 CREATE TABLE users (
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(255), 
