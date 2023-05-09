@@ -1,16 +1,17 @@
 const ChatsModel = require("./models/Chats");
-const OrdersModel = require("./models/Orders");
+const ProductsModel = require("./models/Products");
 const Knex = require('knex')
 const knex = Knex(require('../knexfile'))
 
 const models = [
     ChatsModel,
-    OrdersModel
+    ProductsModel
+    
 ]
 
 models.forEach(model => model.knex(knex))
 
 module.exports = {
     ChatsModel,
-    OrdersModel
+    ProductsModel
 }

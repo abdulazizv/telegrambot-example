@@ -11,5 +11,23 @@ class Products extends Model {
             .select('*')
     }
 
-    static saveProduct()
+    static saveProduct(name,price) {
+        return this.query()
+            .insert({
+                name:name,
+                price:price
+            })
+    }
+
+    static getProductByName(name) {
+        return this.query()
+            .findOne("name",name)
+    }
+
+    static getProductByPrice(price) {
+        return this.query()
+            .findOne("price",price)
+    }
 }
+
+module.exports = Products;
