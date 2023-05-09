@@ -21,7 +21,7 @@ module.exports = new WizardScene(
     'order',
     async (ctx) => {
         const order = ctx.session.order;
-        if(order.length < 1 || !order) {
+        if(!order) {
             await ctx.scene.leave()
             return ctx.reply(ctx.i18n.t("noContentinOrder"),
                 Markup.keyboard(

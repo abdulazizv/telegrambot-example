@@ -2,7 +2,7 @@ const Markup = require("telegraf/markup");
 const WizardScene = require("telegraf/scenes/wizard");
 const Composer = require("telegraf/composer");
 const { match } = require("telegraf-i18n");
-const { ChatsModel } = require("../models");
+const { ChatsModel,ProductsModel } = require("../models");
 const { saveSession } = require("../methods");
 
 function BasicCommandsHandler(handler) {
@@ -36,9 +36,24 @@ module.exports = new WizardScene(
             return global.routes.start(ctx)
         }) 
         .hears(match("withsoboy"),async (ctx) => {
-            return global.routes.start(ctx);
+            const products = await ProductsModel.getAllProducts();
+            let keyboard = [ctx.i18n.t('korzinka'), ctx.i18n.t('back')]
+            .concat(
+            products.map(product => product.id + ". " + product.name)
+            )
+            // return global.routes.start(ctx);
+            return ctx.reply(
+                ctx.i18n.t('what-size'),
+                Markup.keyboard(keyboard, {
+                  columns: 2
+                }).resize().extra()
+              )
         })
         .hears(match("main-menu"),async (ctx) => {
+            return global.routes.start(ctx);
+        })
+        .hears(match("back"),async (ctx) => {
+            await ctx.scene.leave()
             return global.routes.start(ctx);
         })
 )
