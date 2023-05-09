@@ -26,14 +26,24 @@ module.exports = new WizardScene(
             return ctx.reply(ctx.i18n.t("noContentinOrder"),
                 Markup.keyboard(
                     [
-                        [ctx.i18n.t("")]
+                        [ctx.i18n.t("main-menu"),ctx.i18n.t("choose-food")]
                     ]
                 )
+                .resize()
+                .extra()
             )
         } else {
             await ctx.scene.leave()
             ctx.reply("Hello World");
             global.routes.start(ctx);
         }
-    }
+    },
+    (new Composer())
+    .hears(match("main-menu"),async (ctx) => {
+        await ctx.scene.leave();
+        return global.routes.start(ctx)
+    })
+    .hears(match("choose-food"), async (ctx) => {
+        await ctx.scene.enter("choose-optionOrder")
+    })
 )

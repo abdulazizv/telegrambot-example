@@ -4,5 +4,6 @@ module.exports = {
     chooseOptionOrder: require("./choose-optionOrder"),
     writeSupport: require("./writeToSupport"),
     aboutUs: require("./about-us"),
-    settings: require("./settings")
+    settings: require("./settings"),
+    order: require("./order")
 }
